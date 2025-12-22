@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>教学资源 - 导演档案馆</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+<style>
+    .resource-card:hover .download-icon {
+      transform: translateY(-3px);
+    }
+    .video-card:hover .play-icon {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="bg-[#111111] text-white">
+<!-- 导航栏 -->
+<nav class="sticky top-0 z-50 bg-[#111111]/90 backdrop-blur-md border-b border-[#B1ACAC] px-6 py-4 flex justify-between items-center">
+<!-- Logo和标题 -->
+<div class="flex items-center">
+<a class="flex items-center" href="index.html">
+<div class="bg-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-full mr-3">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:movie-filter"></iconify-icon>
+</div>
+<span class="text-xl" style="font-family: SimSun, serif">导演档案馆</span>
+</a>
+</div>
+<!-- 主导航 -->
+<div class="hidden md:flex space-x-8">
+  <a class="hover:text-[#C9A46A] transition" href="index.html">首页</a>
+<a class="hover:text-[#C9A46A] transition" href="director_index.html">导演索引</a>
+<a class="hover:text-[#C9A46A] transition" href="biography.html">生平档案</a>
+<a class="hover:text-[#C9A46A] transition" href="work_decoded.html">作品解码</a>
+<a class="hover:text-[#C9A46A] transition" href="#">创作哲学</a>
+<a class="text-[#C9A46A] transition" href="teaching_resources.html">教学资源</a>
+</div>
+<!-- 搜索和用户功能 -->
+<div class="flex items-center space-x-4">
+<div class="relative">
+<input class="bg-[#222222] border border-[#B1ACAC] rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C9A46A] w-40 md:w-64" placeholder="搜索教学资源..." type="text"/>
+<iconify-icon class="absolute left-3 top-2.5 text-lg text-[#B1ACAC]" icon="mdi:magnify"></iconify-icon>
+</div>
+<button class="bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] px-4 py-2 rounded-lg text-sm transition">个人中心</button>
+</div>
+</nav>
+<!-- 页面内容 -->
+<div class="container mx-auto px-4 py-8">
+<div class="text-center mb-12">
+<h1 class="text-3xl md:text-4xl mb-4" style="font-family: SimSun, serif">教学资源中心</h1>
+<p class="text-[#B1ACAC] max-w-2xl mx-auto">为影视教育工作者提供可直接引用的教案、拉片笔记与导演风格分析素材，节约60%备课时间</p>
+</div>
+<!-- 筛选区 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-6 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div>
+<label class="block text-[#B1ACAC] text-sm mb-2">课程类型</label>
+<select class="w-full bg-[#111111] border border-[#B1ACAC]/20 rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A46A]">
+<option>全部类型</option>
+<option>导演基础</option>
+<option>类型电影分析</option>
+<option>毕业创作指导</option>
+<option>电影史专题</option>
+<option>视听语言</option>
+</select>
+</div>
+<div>
+<label class="block text-[#B1ACAC] text-sm mb-2">难度等级</label>
+<select class="w-full bg-[#111111] border border-[#B1ACAC]/20 rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A46A]">
+<option>全部难度</option>
+<option>初级（大一）</option>
+<option>中级（大二-大三）</option>
+<option>高级（大四-研究生）</option>
+</select>
+</div>
+<div>
+<label class="block text-[#B1ACAC] text-sm mb-2">文件格式</label>
+<select class="w-full bg-[#111111] border border-[#B1ACAC]/20 rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A46A]">
+<option>全部格式</option>
+<option>PDF文档</option>
+<option>PPT课件</option>
+<option>视频资料</option>
+<option>图像素材</option>
+</select>
+</div>
+<div class="flex items-end">
+<button class="w-full bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] py-2 rounded-lg transition">应用筛选</button>
+</div>
+</div>
+</div>
+<!-- 拉片笔记下载区 -->
+<div class="mb-12">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl flex items-center" style="font-family: SimSun, serif">
+<iconify-icon class="mr-3 text-[#C9A46A]" icon="mdi:notebook"></iconify-icon>
+          拉片笔记下载
+        </h2>
+<a class="text-[#C9A46A] flex items-center" href="#">
+<span>查看全部笔记</span>
+<iconify-icon class="ml-1" icon="mdi:chevron-right"></iconify-icon>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- 笔记1 -->
+<div class="resource-card bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl overflow-hidden hover:shadow-lg transition">
+<div class="h-48 overflow-hidden relative">
+<img alt="诺兰时间结构笔记" class="w-full h-full object-cover" src="https://pic.rmb.bdstatic.com/bjh/807fd2f4535d4dedec9a90e20b584d3b3246.jpeg@h_1280"/>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#111111] to-transparent p-4">
+<span class="bg-[#C9A46A] text-[#111111] px-2 py-1 rounded text-xs">导演基础</span>
+</div>
+</div>
+<div class="p-5">
+<h3 class="text-xl mb-2" style="font-family: SimSun, serif">诺兰非线性叙事解析</h3>
+<p class="text-[#B1ACAC] text-sm mb-4">《记忆碎片》《信条》时间结构拆解，包含关键场景时间轴图谱</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center text-sm text-[#B1ACAC]">
+<iconify-icon class="mr-1" icon="mdi:file-pdf"></iconify-icon>
+<span>32页 · 28次下载</span>
+</div>
+<a class="download-icon bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-full w-10 h-10 flex items-center justify-center transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:download"></iconify-icon>
+</a>
+</div>
+</div>
+</div>
+<!-- 笔记2 -->
+<div class="resource-card bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl overflow-hidden hover:shadow-lg transition">
+<div class="h-48 overflow-hidden relative">
+<img alt="王家卫视觉风格笔记" class="w-full h-full object-cover" src="https://img0.baidu.com/it/u=301976402,1612320761&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500"/>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#111111] to-transparent p-4">
+<span class="bg-[#C9A46A] text-[#111111] px-2 py-1 rounded text-xs">类型电影分析</span>
+</div>
+</div>
+<div class="p-5">
+<h3 class="text-xl mb-2" style="font-family: SimSun, serif">王家卫视觉风格图谱</h3>
+<p class="text-[#B1ACAC] text-sm mb-4">《重庆森林》《花样年华》色彩与构图分析，含场景色板与镜头运动图</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center text-sm text-[#B1ACAC]">
+<iconify-icon class="mr-1" icon="mdi:file-pdf"></iconify-icon>
+<span>45页 · 41次下载</span>
+</div>
+<a class="download-icon bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-full w-10 h-10 flex items-center justify-center transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:download"></iconify-icon>
+</a>
+</div>
+</div>
+</div>
+<!-- 笔记3 -->
+<div class="resource-card bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl overflow-hidden hover:shadow-lg transition">
+<div class="h-48 overflow-hidden relative">
+<img alt="长镜头运用笔记" class="w-full h-full object-cover" src="https://img1.baidu.com/it/u=1205011118,3157443669&fm=253&fmt=auto&app=138&f=PNG?w=882&h=500"/>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#111111] to-transparent p-4">
+<span class="bg-[#C9A46A] text-[#111111] px-2 py-1 rounded text-xs">视听语言</span>
+</div>
+</div>
+<div class="p-5">
+<h3 class="text-xl mb-2" style="font-family: SimSun, serif">大师级长镜头运用手册</h3>
+<p class="text-[#B1ACAC] text-sm mb-4">从《人类之子》到《1917》，长镜头调度与技术实现方案</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center text-sm text-[#B1ACAC]">
+<iconify-icon class="mr-1" icon="mdi:file-pdf"></iconify-icon>
+<span>58页 · 36次下载</span>
+</div>
+<a class="download-icon bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-full w-10 h-10 flex items-center justify-center transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:download"></iconify-icon>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 教案库 -->
+<div class="mb-12">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl flex items-center" style="font-family: SimSun, serif">
+<iconify-icon class="mr-3 text-[#C9A46A]" icon="mdi:library"></iconify-icon>
+          教案库
+        </h2>
+<div class="flex items-center">
+<span class="text-sm text-[#B1ACAC] mr-4">排序:</span>
+<select class="bg-transparent border border-[#B1ACAC]/20 rounded-lg px-3 py-1 focus:outline-none">
+<option>按热度</option>
+<option>按时间</option>
+<option>按下载量</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- 教案1 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-6 hover:border-[#C9A46A] transition">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-2 py-1 rounded text-xs mb-2">导演基础</span>
+<h3 class="text-xl mb-1" style="font-family: SimSun, serif">导演思维训练：空间叙事</h3>
+<p class="text-[#B1ACAC] text-sm">8课时教案 · 适合大一课程</p>
+</div>
+<div class="flex items-center bg-[#111111] px-2 py-1 rounded-lg">
+<iconify-icon class="text-[#C9A46A] mr-1" icon="mdi:download"></iconify-icon>
+<span class="text-sm">126次</span>
+</div>
+</div>
+<p class="text-[#B1ACAC] mb-4">通过分析《寄生虫》的空间层次设计，训练学生利用空间结构推动叙事的能力，含5个课堂练习模板</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">空间转换练习</span>
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">阶层隐喻分析</span>
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">垂直调度案例</span>
+</div>
+<button class="w-full bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 py-2 rounded-lg transition flex items-center justify-center">
+<iconify-icon class="mr-2" icon="mdi:download"></iconify-icon>
+            下载完整教案包（PPT+练习册）
+          </button>
+</div>
+<!-- 教案2 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-6 hover:border-[#C9A46A] transition">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-2 py-1 rounded text-xs mb-2">毕业创作指导</span>
+<h3 class="text-xl mb-1" style="font-family: SimSun, serif">低成本短片制作指南</h3>
+<p class="text-[#B1ACAC] text-sm">12课时教案 · 适合大四课程</p>
+</div>
+<div class="flex items-center bg-[#111111] px-2 py-1 rounded-lg">
+<iconify-icon class="text-[#C9A46A] mr-1" icon="mdi:download"></iconify-icon>
+<span class="text-sm">89次</span>
+</div>
+</div>
+<p class="text-[#B1ACAC] mb-4">从剧本优化到后期全流程解决方案，包含5部获奖学生短片案例分析及预算控制模板</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">万元预算方案</span>
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">单场景叙事技巧</span>
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">电影节投递策略</span>
+</div>
+<button class="w-full bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 py-2 rounded-lg transition flex items-center justify-center">
+<iconify-icon class="mr-2" icon="mdi:download"></iconify-icon>
+            下载完整教案包（PPT+预算表）
+          </button>
+</div>
+<!-- 教案3 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-6 hover:border-[#C9A46A] transition">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-2 py-1 rounded text-xs mb-2">类型电影分析</span>
+<h3 class="text-xl mb-1" style="font-family: SimSun, serif">科幻电影世界观构建</h3>
+<p class="text-[#B1ACAC] text-sm">6课时教案 · 适合大二课程</p>
+</div>
+<div class="flex items-center bg-[#111111] px-2 py-1 rounded-lg">
+<iconify-icon class="text-[#C9A46A] mr-1" icon="mdi:download"></iconify-icon>
+<span class="text-sm">73次</span>
+</div>
+</div>
+<p class="text-[#B1ACAC] mb-4">通过《银翼杀手》《降临》等案例解析科幻世界的构建逻辑，包含社会结构、技术体系、视觉符号设计方法论</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">技术合理性设计</span>
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">社会架构图模板</span>
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">视觉符号系统</span>
+</div>
+<button class="w-full bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 py-2 rounded-lg transition flex items-center justify-center">
+<iconify-icon class="mr-2" icon="mdi:download"></iconify-icon>
+            下载完整教案包（PPT+架构图）
+          </button>
+</div>
+<!-- 教案4 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-6 hover:border-[#C9A46A] transition">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-2 py-1 rounded text-xs mb-2">电影史专题</span>
+<h3 class="text-xl mb-1" style="font-family: SimSun, serif">新浪潮运动专题课</h3>
+<p class="text-[#B1ACAC] text-sm">10课时教案 · 适合大三课程</p>
+</div>
+<div class="flex items-center bg-[#111111] px-2 py-1 rounded-lg">
+<iconify-icon class="text-[#C9A46A] mr-1" icon="mdi:download"></iconify-icon>
+<span class="text-sm">65次</span>
+</div>
+</div>
+<p class="text-[#B1ACAC] mb-4">法国新浪潮与全球影响，包含特吕弗、戈达尔关键作品分析及跳接、手持摄影等技法教学模块</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">作者论实践</span>
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">低成本制片革命</span>
+<span class="bg-[#111111] border border-[#B1ACAC]/20 px-2 py-1 rounded text-xs">反叙事结构</span>
+</div>
+<button class="w-full bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 py-2 rounded-lg transition flex items-center justify-center">
+<iconify-icon class="mr-2" icon="mdi:download"></iconify-icon>
+            下载完整教案包（PPT+片单）
+          </button>
+</div>
+</div>
+</div>
+<!-- 导演风格视频 -->
+<div class="mb-12">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl flex items-center" style="font-family: SimSun, serif">
+<iconify-icon class="mr-3 text-[#C9A46A]" icon="mdi:play-box"></iconify-icon>
+          一分钟导演风格解析
+        </h2>
+<a class="text-[#C9A46A] flex items-center" href="#">
+<span>查看更多解析视频</span>
+<iconify-icon class="ml-1" icon="mdi:chevron-right"></iconify-icon>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- 视频1 -->
+<a class="video-card block relative group" href="#">
+<div class="aspect-video bg-[#1A1A1A] rounded-xl overflow-hidden relative">
+<img alt="韦斯·安德森对称构图" class="w-full h-full object-cover" src="https://img1.baidu.com/it/u=4072707623,2998605667&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=500"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent"></div>
+<div class="play-icon absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+<div class="bg-[#C9A46A] rounded-full w-14 h-14 flex items-center justify-center">
+<iconify-icon class="text-2xl text-[#111111]" icon="mdi:play"></iconify-icon>
+</div>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="font-medium group-hover:text-[#C9A46A] transition">韦斯·安德森对称构图</h3>
+<p class="text-[#B1ACAC] text-xs">1分23秒 · 平面设计美学</p>
+</div>
+</a>
+<!-- 视频2 -->
+<a class="video-card block relative group" href="#">
+<div class="aspect-video bg-[#1A1A1A] rounded-xl overflow-hidden relative">
+<img alt="王家卫色彩情绪" class="w-full h-full object-cover" src="https://img1.baidu.com/it/u=2836515225,2161737900&fm=253&fmt=auto?w=1067&h=800"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent"></div>
+<div class="play-icon absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+<div class="bg-[#C9A46A] rounded-full w-14 h-14 flex items-center justify-center">
+<iconify-icon class="text-2xl text-[#111111]" icon="mdi:play"></iconify-icon>
+</div>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="font-medium group-hover:text-[#C9A46A] transition">王家卫色彩情绪表达</h3>
+<p class="text-[#B1ACAC] text-xs">1分15秒 · 港式浪漫主义</p>
+</div>
+</a>
+<!-- 视频3 -->
+<a class="video-card block relative group" href="#">
+<div class="aspect-video bg-[#1A1A1A] rounded-xl overflow-hidden relative">
+<img alt="诺兰时间结构" class="w-full h-full object-cover" src="https://img2.baidu.com/it/u=2519701152,1637100505&fm=253&fmt=auto&app=138&f=JPEG?w=739&h=500"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent"></div>
+<div class="play-icon absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+<div class="bg-[#C9A46A] rounded-full w-14 h-14 flex items-center justify-center">
+<iconify-icon class="text-2xl text-[#111111]" icon="mdi:play"></iconify-icon>
+</div>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="font-medium group-hover:text-[#C9A46A] transition">诺兰时间结构拆解</h3>
+<p class="text-[#B1ACAC] text-xs">1分30秒 · 时空叙事魔方</p>
+</div>
+</a>
+<!-- 视频4 -->
+<a class="video-card block relative group" href="#">
+<div class="aspect-video bg-[#1A1A1A] rounded-xl overflow-hidden relative">
+<img alt="是枝裕和家庭叙事" class="w-full h-full object-cover" src="https://img2.baidu.com/it/u=1345669165,406930856&fm=253&fmt=auto&app=120&f=JPEG?w=1236&h=800"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent"></div>
+<div class="play-icon absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+<div class="bg-[#C9A46A] rounded-full w-14 h-14 flex items-center justify-center">
+<iconify-icon class="text-2xl text-[#111111]" icon="mdi:play"></iconify-icon>
+</div>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="font-medium group-hover:text-[#C9A46A] transition">是枝裕和家庭叙事</h3>
+<p class="text-[#B1ACAC] text-xs">1分10秒 · 静水流深美学</p>
+</div>
+</a>
+</div>
+</div>
+<!-- 教师上传区 -->
+<div class="bg-gradient-to-r from-[#111111] to-[#1A1A1A] border border-[#C9A46A]/30 rounded-xl p-8 text-center">
+<h2 class="text-2xl md:text-3xl mb-4" style="font-family: SimSun, serif">教育工作者专属通道</h2>
+<p class="text-[#B1ACAC] max-w-xl mx-auto mb-6">认证教师可上传教学资源，通过审核后共享给全国影视教育工作者</p>
+<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+<button class="bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] font-medium px-6 py-3 rounded-lg transition">
+          教师身份认证
+        </button>
+<button class="bg-transparent hover:bg-[#222222] border border-[#B1ACAC] text-white font-medium px-6 py-3 rounded-lg transition">
+          查看上传指南
+        </button>
+</div>
+</div>
+</div>
+<!-- 页脚 -->
+<footer class="bg-[#151515] py-12 border-t border-[#B1ACAC]/20 mt-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- 网站信息 -->
+<div>
+<div class="flex items-center mb-6">
+<div class="bg-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-full mr-3">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:movie-filter"></iconify-icon>
+</div>
+<span class="text-xl font-semibold" style="font-family: SimSun, serif">导演档案馆</span>
+</div>
+<p class="text-[#B1ACAC] mb-6">全球导演资料一键库，为影视从业者提供权威可溯源资料</p>
+<div class="flex space-x-4">
+<a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:wechat"></iconify-icon>
+</a>
+<a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:douban"></iconify-icon>
+</a>
+</div>
+</div>
+<!-- 栏目导航 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">主要栏目</h3>
+<ul class="space-y-2">
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="director.html">导演索引</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="biography.html">生平档案</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="work_decoded.html">作品解码</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">创作哲学</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="teaching_resources.html">教学资源</a></li>
+</ul>
+</div>
+<!-- 资源分类 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">资源类型</h3>
+<ul class="space-y-2">
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">导演年表</a></li>
+<li><a class="text-[#C9A46A] hover:text-[#C9A46A] transition" href="#">分镜手稿</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">视觉解析</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">导演访谈</a></li>
+<li><a class="text-[#C9A46A] hover:text-[#C9A46A] transition" href="#">影视教案</a></li>
+</ul>
+</div>
+<!-- 联系方式 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">联系我们</h3>
+<ul class="space-y-3">
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:email"></iconify-icon>
+<span class="text-[#B1ACAC]">contact@directorarchive.com</span>
+</li>
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:wechat"></iconify-icon>
+<span class="text-[#B1ACAC]">Directors_Archive</span>
+</li>
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:map-marker"></iconify-icon>
+<span class="text-[#B1ACAC]">重庆市巴南区燕尾山路898号</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#B1ACAC]/20 mt-12 pt-6 text-center text-sm text-[#B1ACAC]">
+<p>© 2025 导演档案馆. 教育资源共享平台 | 学术引用请注明出处</p>
+<p>教师上传资源经审核后发布，保留原创作者署名权</p>
+</div>
+</div>
+</footer>
+</body>
+</html>

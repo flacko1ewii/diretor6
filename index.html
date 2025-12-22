@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>导演档案馆 - 全球导演资料一键库</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+<style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .fade-in-element {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#111111] text-white font-sans">
+<!-- 导航栏 -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[#111111]/90 backdrop-blur-md border-b border-[#B1ACAC] px-6 py-4 flex justify-between items-center">
+<!-- Logo区 -->
+<div class="flex items-center">
+<div class="bg-[#C9A46A] w-12 h-12 flex items-center justify-center rounded-full mr-3">
+<iconify-icon class="text-[#111111] text-2xl" icon="mdi:movie-filter"></iconify-icon>
+</div>
+<span class="text-2xl font-semibold" style="font-family: SimSun, serif">导演档案馆</span>
+</div>
+<!-- 主导航 -->
+<div class="hidden md:flex space-x-8">
+<a class="text-[#C9A46A] hover:text-white transition" href="#">首页</a>
+<a class="hover:text-[#C9A46A] transition" href="director.html">导演索引</a>
+<a class="hover:text-[#C9A46A] transition" href="biography.html">生平档案</a>
+<a class="hover:text-[#C9A46A] transition" href="work_decoded.html">作品解码</a>
+<a class="hover:text-[#C9A46A] transition" href="#">创作哲学</a>
+<a class="hover:text-[#C9A46A] transition" href="teaching_resources.html">教学资源</a>
+</div>
+<!-- 搜索和用户功能 -->
+<div class="flex items-center space-x-4">
+<div class="relative">
+<input class="bg-[#222222] border border-[#B1ACAC] rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C9A46A] w-40 md:w-64" placeholder="搜索导演..." type="text"/>
+<iconify-icon class="absolute left-3 top-2.5 text-lg text-[#B1ACAC]" icon="mdi:magnify"></iconify-icon>
+</div>
+<button class="bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] px-4 py-2 rounded-lg transition">登录/注册</button>
+</div>
+</nav>
+<!-- Banner区域 -->
+<section class="h-[500px] mt-[70px] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-[#111111] via-[#111111]/80 to-transparent z-10"></div>
+<!-- 幻灯片轮播 -->
+<div class="absolute inset-0 flex transition-transform duration-1000 ease-in-out">
+<!-- 幻灯片1 -->
+<div class="min-w-full h-full bg-cover bg-center flex items-center" style="background-image: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url('/agent/placeholder.svg')">
+<div class="container mx-auto px-8 z-20 fade-in-element">
+<h1 class="text-5xl md:text-6xl mb-6" style="font-family: SimSun, serif">全球导演资料一键库</h1>
+<p class="text-xl max-w-2xl mb-8">提供全球导演年表、分镜、采访、风格等可溯源下载数据，让找资料时间缩短80%</p>
+<button class="bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] font-medium px-6 py-3 rounded-lg transition text-lg">立即搜索导演</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 卖点介绍区 -->
+<section class="py-16">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl md:text-4xl mb-12 text-center" style="font-family: SimSun, serif">为什么选择导演档案馆</h2>
+<div class="grid md:grid-cols-3 gap-10">
+<!-- 卖点1 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-8 hover:border-[#C9A46A] transition">
+<div class="flex items-center mb-6">
+<div class="bg-[#C9A46A] w-12 h-12 flex items-center justify-center rounded-lg mr-4">
+<iconify-icon class="text-[#111111] text-2xl" icon="mdi:clock-fast"></iconify-icon>
+</div>
+<h3 class="text-2xl" style="font-family: SimSun, serif">快速定位导演全作品</h3>
+</div>
+<p class="text-[#B1ACAC]">A-Z姓氏索引+实时搜索，输入"诺兰"3秒跳出12部影片与获奖列表，数据人工逐条核对</p>
+</div>
+<!-- 卖点2 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-8 hover:border-[#C9A46A] transition">
+<div class="flex items-center mb-6">
+<div class="bg-[#C9A46A] w-12 h-12 flex items-center justify-center rounded-lg mr-4">
+<iconify-icon class="text-[#111111] text-2xl" icon="mdi:artstation"></iconify-icon>
+</div>
+<h3 class="text-2xl" style="font-family: SimSun, serif">深入了解导演作品风格</h3>
+</div>
+<p class="text-[#B1ACAC]">每部影片配有120字"主题概括"+关系图谱，可视化展示导演合作网络与风格标签</p>
+</div>
+<!-- 卖点3 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-8 hover:border-[#C9A46A] transition">
+<div class="flex items-center mb-6">
+<div class="bg-[#C9A46A] w-12 h-12 flex items-center justify-center rounded-lg mr-4">
+<iconify-icon class="text-[#111111] text-2xl" icon="mdi:download"></iconify-icon>
+</div>
+<h3 class="text-2xl" style="font-family: SimSun, serif">可下载分镜脚本资源</h3>
+</div>
+<p class="text-[#B1ACAC]">提供标注来源的分镜头与制作参数，可保存本地用于课堂解析或创作参考</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 热门导演推荐区 -->
+<section class="py-12 bg-[#151515]">
+<div class="container mx-auto px-6">
+<div class="flex justify-between items-center mb-8">
+<h2 class="text-3xl" style="font-family: SimSun, serif">热门导演排行榜</h2>
+<a class="flex items-center text-[#C9A46A]" href="#">
+<span>查看全部TOP50</span>
+<iconify-icon class="ml-1" icon="mdi:chevron-right"></iconify-icon>
+</a>
+</div>
+<div class="relative">
+<div class="overflow-x-auto scrollbar-hide pb-4">
+<div class="flex space-x-6" style="width: max-content;">
+<!-- 导演卡片1 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/10 rounded-xl w-64 flex-shrink-0 overflow-hidden">
+<div class="relative">
+<img alt="Christopher Nolan portrait" class="w-full h-48 object-cover" src="https://p3.itc.cn/images01/20231208/fcf4227237b247d4ab888a3cc2849e3d.jpeg"/>
+<div class="absolute top-4 right-4 bg-[#C9A46A] text-[#111111] px-3 py-1 rounded-lg font-medium">#1</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl mb-1" style="font-family: SimSun, serif">克里斯托弗·诺兰</h3>
+<p class="text-[#B1ACAC] text-sm mb-3">《信条》《星际穿越》《盗梦空间》</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<iconify-icon class="text-green-500 mr-1" icon="mdi:trending-up"></iconify-icon>
+<span class="text-sm">+12% 热度</span>
+</div>
+<button class="bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 px-3 py-1 rounded text-sm transition">查看年表</button>
+</div>
+</div>
+</div>
+<!-- 导演卡片2 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/10 rounded-xl w-64 flex-shrink-0 overflow-hidden">
+<div class="relative">
+<img alt="Hayao Miyazaki portrait" class="w-full h-48 object-cover" src="https://photocdn.sohu.com/20140829/Img403877549.jpg"/>
+<div class="absolute top-4 right-4 bg-[#C9A46A] text-[#111111] px-3 py-1 rounded-lg font-medium">#2</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl mb-1" style="font-family: SimSun, serif">宫崎骏</h3>
+<p class="text-[#B1ACAC] text-sm mb-3">《千与千寻》《哈尔的移动城堡》《幽灵公主》</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<iconify-icon class="text-yellow-500 mr-1" icon="mdi:trending-neutral"></iconify-icon>
+<span class="text-sm">热度稳定</span>
+</div>
+<button class="bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 px-3 py-1 rounded text-sm transition">查看年表</button>
+</div>
+</div>
+</div>
+<!-- 导演卡片3 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/10 rounded-xl w-64 flex-shrink-0 overflow-hidden">
+<div class="relative">
+<img alt="Bong Joon-ho portrait" class="w-full h-48 object-cover" src="https://img2.baidu.com/it/u=2022569529,2135543115&fm=253&fmt=auto&app=138&f=JPEG?w=333&h=500"/>
+<div class="absolute top-4 right-4 bg-[#C9A46A] text-[#111111] px-3 py-1 rounded-lg font-medium">#3</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl mb-1" style="font-family: SimSun, serif">奉俊昊</h3>
+<p class="text-[#B1ACAC] text-sm mb-3">《寄生虫》《雪国列车》《杀人回忆》</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<iconify-icon class="text-green-500 mr-1" icon="mdi:trending-up"></iconify-icon>
+<span class="text-sm">+5% 热度</span>
+</div>
+<button class="bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 px-3 py-1 rounded text-sm transition">查看年表</button>
+</div>
+</div>
+</div>
+<!-- 导演卡片4 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/10 rounded-xl w-64 flex-shrink-0 overflow-hidden">
+<div class="relative">
+<img alt="Bong Joon-ho portrait" class="w-full h-48 object-cover" src="https://img1.baidu.com/it/u=2771274221,3568361337&fm=253&fmt=auto&app=138&f=JPEG?w=581&h=387"/>
+<div class="absolute top-4 right-4 bg-[#C9A46A] text-[#111111] px-3 py-1 rounded-lg font-medium">#3</div>
+</div>
+<div class="p-4">
+<h3 class="text-xl mb-1" style="font-family: SimSun, serif">阿尔伯特·塞拉</h3>
+<p class="text-[#B1ACAC] text-sm mb-3">《孤寂午后》《岛屿上的煎熬》《堂吉诃德》</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<iconify-icon class="text-green-500 mr-1" icon="mdi:trending-up"></iconify-icon>
+<span class="text-sm">+3% 热度</span>
+</div>
+<button class="bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 px-3 py-1 rounded text-sm transition">查看年表</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 内容资源展示区 -->
+<section class="py-16">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl md:text-4xl mb-8 text-center" style="font-family: SimSun, serif">最新上传资源</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- 资源卡片1 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl overflow-hidden hover:shadow-xl transition">
+<img alt="Dune storyboard example" class="w-full h-48 object-cover" src="https://miaobi-lite.bj.bcebos.com/miaobi/5mao/b%27LV8xNzMzNzkyNjgyLjI3NzM0Mw%3D%3D%27/0.png"/>
+<div class="p-6">
+<div class="flex justify-between items-center mb-3">
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-2 py-1 rounded text-xs">分镜脚本</span>
+<span class="text-[#B1ACAC] text-sm">42次下载</span>
+</div>
+<h3 class="text-xl mb-2" style="font-family: SimSun, serif">《沙丘》战斗场景分镜集</h3>
+<p class="text-[#B1ACAC] mb-4">包含8个关键战斗场景的分镜设计，附带摄影机角度与运镜说明</p>
+<button class="w-full bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 py-2 rounded transition flex items-center justify-center">
+<iconify-icon class="mr-2" icon="mdi:download"></iconify-icon>
+              下载PDF文档
+            </button>
+</div>
+</div>
+<!-- 资源卡片2 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl overflow-hidden hover:shadow-xl transition">
+<img alt="Dune storyboard example" class="w-full h-48 object-cover" src="https://img0.baidu.com/it/u=2687174775,1077686259&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"/>
+<div class="p-6">
+<div class="flex justify-between items-center mb-3">
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-2 py-1 rounded text-xs">导演访谈</span>
+<span class="text-[#B1ACAC] text-sm">28次观看</span>
+</div>
+<h3 class="text-xl mb-2" style="font-family: SimSun, serif">毕赣和汤唯谈《地球最后的夜晚》</h3>
+<p class="text-[#B1ACAC] mb-4">独家访谈，解密影片梦境哲学、视觉美学与叙事手法</p>
+<button class="w-full bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 py-2 rounded transition flex items-center justify-center">
+<iconify-icon class="mr-2" icon="mdi:play"></iconify-icon>
+              观看完整访谈
+            </button>
+</div>
+</div>
+<!-- 资源卡片3 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl overflow-hidden hover:shadow-xl transition">
+<img alt="Wes Anderson color palette" class="w-full h-48 object-cover" src="https://gips2.baidu.com/it/u=3985308801,2380832549&fm=3074&app=3074&f=JPEG"/>
+<div class="p-6">
+<div class="flex justify-between items-center mb-3">
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-2 py-1 rounded text-xs">视觉分析</span>
+<span class="text-[#B1ACAC] text-sm">65次下载</span>
+</div>
+<h3 class="text-xl mb-2" style="font-family: SimSun, serif">韦斯·安德森色彩系统解析</h3>
+<p class="text-[#B1ACAC] mb-4">包含《布达佩斯大饭店》等7部影片的色板与色彩运用规则分析</p>
+<button class="w-full bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 py-2 rounded transition flex items-center justify-center">
+<iconify-icon class="mr-2" icon="mdi:file-document-outline"></iconify-icon>
+              查看分析报告
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 行动号召区 -->
+<section class="py-16 bg-gradient-to-r from-[#111111] to-[#1A1A1A]">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-3xl md:text-4xl mb-6" style="font-family: SimSun, serif">开启导演研究之旅</h2>
+<p class="max-w-2xl mx-auto text-lg text-[#B1ACAC] mb-10">加入10,000+影视专业人士使用的导演资料平台</p>
+<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+<button class="bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] font-medium px-8 py-3 rounded-lg transition text-lg">
+          免费注册账号
+        </button>
+<button class="bg-transparent hover:bg-[#222222] border border-[#B1ACAC] text-white font-medium px-8 py-3 rounded-lg transition text-lg">
+          查看功能演示
+        </button>
+</div>
+</div>
+</section>
+<!-- 页脚 -->
+<footer class="bg-[#151515] py-12 border-t border-[#B1ACAC]/20">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- 网站信息 -->
+<div>
+<div class="flex items-center mb-6">
+<div class="bg-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-full mr-3">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:movie-filter"></iconify-icon>
+</div>
+<span class="text-xl font-semibold" style="font-family: SimSun, serif">导演档案馆</span>
+</div>
+<p class="text-[#B1ACAC] mb-6">全球导演资料一键库，为影视从业者提供权威可溯源资料</p>
+<div class="flex space-x-4">
+<a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:wechat"></iconify-icon>
+</a>
+<a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:douban"></iconify-icon>
+</a>
+</div>
+</div>
+<!-- 栏目导航 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">主要栏目</h3>
+<ul class="space-y-2">
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="director.html">导演索引</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="biography.html">生平档案</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="work_decoded.html">作品解码</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">创作哲学</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="teaching_resources.html">教学资源</a></li>
+</ul>
+</div>
+<!-- 资源分类 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">资源类型</h3>
+<ul class="space-y-2">
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">导演年表</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">分镜手稿</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">视觉解析</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">导演访谈</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">影视教案</a></li>
+</ul>
+</div>
+<!-- 联系方式 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">联系我们</h3>
+<ul class="space-y-3">
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:email"></iconify-icon>
+<span class="text-[#B1ACAC]">contact@directorarchive.com</span>
+</li>
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:wechat"></iconify-icon>
+<span class="text-[#B1ACAC]">Directors_Archive</span>
+</li>
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:map-marker"></iconify-icon>
+<span class="text-[#B1ACAC]">重庆市巴南区燕尾山路898号</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#B1ACAC]/20 mt-12 pt-6 text-center text-sm text-[#B1ACAC]">
+<p>© 2025 导演档案馆. 所有资料均标注来源，学术引用请注明出处</p>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>克里斯托弗·诺兰 - 生平档案 | 导演档案馆</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #C9A46A;
+    }
+    
+    .timeline-dot {
+      position: absolute;
+      left: -6px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #C9A46A;
+      z-index: 10;
+    }
+    
+    #relation-chart {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-[#111111] text-white">
+<!-- 导航栏 -->
+<nav class="sticky top-0 z-50 bg-[#111111]/90 backdrop-blur-md border-b border-[#B1ACAC] px-6 py-4 flex justify-between items-center">
+<!-- Logo和标题 -->
+<div class="flex items-center">
+<a class="flex items-center" href="index.html">
+<div class="bg-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-full mr-3">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:movie-filter"></iconify-icon>
+</div>
+<span class="text-xl" style="font-family: SimSun, serif">导演档案馆</span>
+</a>
+</div>
+<!-- 主导航 -->
+<div class="hidden md:flex space-x-8">
+<a class="hover:text-[#C9A46A] transition" href="index.html">首页</a>
+<a class="hover:text-[#C9A46A] transition" href="director.html">导演索引</a>
+<a class="text-[#C9A46A] transition" href="#">生平档案</a>
+<a class="hover:text-[#C9A46A] transition" href="work_decoded.html">作品解码</a>
+<a class="hover:text-[#C9A46A] transition" href="#">创作哲学</a>
+<a class="hover:text-[#C9A46A] transition" href="teaching_resources.html">教学资源</a>
+</div>
+<!-- 搜索和用户功能 -->
+<div class="flex items-center space-x-4">
+<div class="relative">
+<input class="bg-[#222222] border border-[#B1ACAC] rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C9A46A] w-40 md:w-64" placeholder="搜索..." type="text"/>
+<iconify-icon class="absolute left-3 top-2.5 text-lg text-[#B1ACAC]" icon="mdi:magnify"></iconify-icon>
+</div>
+<button class="bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] px-4 py-2 rounded-lg text-sm transition">个人中心</button>
+</div>
+</nav>
+<!-- 导演头部区域 -->
+<div class="relative h-96 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/30 to-transparent z-10"></div>
+<img alt="Christopher Nolan background" class="w-full h-full object-cover" src="https://pic.rmb.bdstatic.com/bjh/1babcfc0b6c3511ec65ce40b8bfdaa791832.jpeg@h_1280"/>
+<div class="container mx-auto px-6 relative z-20 pt-32">
+<div class="flex flex-col md:flex-row items-start md:items-end">
+<div class="bg-[#111111] border-2 border-[#C9A46A] rounded-xl overflow-hidden w-32 h-32 md:w-48 md:h-48 -mb-16 md:-mb-0 mr-6">
+<img alt="Christopher Nolan portrait" class="w-full h-full object-cover" src="https://modao.cc/agent-py/media/generated_images/2025-12-11/71847181b47a42bf9020e74740a5572f.jpg"/>
+</div>
+<div class="flex-1 mt-6 md:mt-0">
+<h1 class="text-3xl md:text-4xl mb-2" style="font-family: SimSun, serif">克里斯托弗·诺兰</h1>
+<p class="text-[#C9A46A] mb-4">Christopher Nolan · 英国导演、编剧、制片人</p>
+<div class="flex flex-wrap gap-3 mb-6">
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-3 py-1 rounded-full text-sm">科幻大师</span>
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-3 py-1 rounded-full text-sm">时间叙事</span>
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-3 py-1 rounded-full text-sm">实拍狂人</span>
+<span class="bg-[#C9A46A]/20 text-[#C9A46A] px-3 py-1 rounded-full text-sm">IMAX先驱</span>
+</div>
+<div class="flex flex-wrap gap-4 text-sm text-[#B1ACAC]">
+<div class="flex items-center">
+<iconify-icon class="mr-2" icon="mdi:calendar"></iconify-icon>
+<span>1970年7月30日 · 伦敦</span>
+</div>
+<div class="flex items-center">
+<iconify-icon class="mr-2" icon="mdi:movie"></iconify-icon>
+<span>12部导演作品 · 47个编剧作品</span>
+</div>
+<div class="flex items-center">
+<iconify-icon class="mr-2" icon="mdi:trophy"></iconify-icon>
+<span>奥斯卡金像奖得主</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 内容区域 -->
+<div class="container mx-auto px-6 py-8">
+<!-- 标签导航 -->
+<div class="flex border-b border-[#B1ACAC]/20 mb-8">
+<a class="px-6 py-3 border-b-2 border-[#C9A46A] text-[#C9A46A]" href="#">导演年表</a>
+<a class="px-6 py-3 hover:text-[#C9A46A] transition" href="#">关系图谱</a>
+<a class="px-6 py-3 hover:text-[#C9A46A] transition" href="#">获奖记录</a>
+<a class="px-6 py-3 hover:text-[#C9A46A] transition" href="#">创作年谱</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- 左侧：时间线 -->
+<div class="lg:col-span-2">
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-6">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl" style="font-family: SimSun, serif">创作年表时间线</h2>
+<div class="flex space-x-2">
+<button class="bg-[#111111] border border-[#B1ACAC]/20 px-3 py-1 rounded hover:bg-[#222222] transition">导出PDF</button>
+<button class="bg-[#111111] border border-[#B1ACAC]/20 px-3 py-1 rounded hover:bg-[#222222] transition">打印年表</button>
+</div>
+</div>
+<div class="relative pl-8">
+<!-- 时间线项目1 -->
+<div class="relative timeline-item pb-8 mb-8">
+<div class="timeline-dot"></div>
+<div class="text-xl font-medium mb-2">1998</div>
+<div class="bg-[#111111] border border-[#B1ACAC]/20 rounded-xl p-4 hover:border-[#C9A46A] transition">
+<h3 class="text-lg mb-1" style="font-family: SimSun, serif">《追随》</h3>
+<p class="text-[#B1ACAC] mb-3">黑白电影处女作，成本仅6000美元，非线性叙事初露锋芒</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">犯罪悬疑</span>
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">非线性叙事</span>
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">独立电影</span>
+</div>
+</div>
+</div>
+<!-- 时间线项目2 -->
+<div class="relative timeline-item pb-8 mb-8">
+<div class="timeline-dot"></div>
+<div class="text-xl font-medium mb-2">2000</div>
+<div class="bg-[#111111] border border-[#B1ACAC]/20 rounded-xl p-4 hover:border-[#C9A46A] transition">
+<h3 class="text-lg mb-1" style="font-family: SimSun, serif">《记忆碎片》</h3>
+<p class="text-[#B1ACAC] mb-3">改编自弟弟乔纳森的小说，倒叙手法开创叙事新范式</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">奥斯卡最佳原创剧本提名</span>
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">倒叙结构</span>
+</div>
+</div>
+</div>
+<!-- 时间线项目3 -->
+<div class="relative timeline-item pb-8 mb-8">
+<div class="timeline-dot"></div>
+<div class="text-xl font-medium mb-2">2005</div>
+<div class="bg-[#111111] border border-[#B1ACAC]/20 rounded-xl p-4 hover:border-[#C9A46A] transition">
+<h3 class="text-lg mb-1" style="font-family: SimSun, serif">《蝙蝠侠：侠影之谜》</h3>
+<p class="text-[#B1ACAC] mb-3">重启蝙蝠侠系列，开创超级英雄写实主义风格</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">超级英雄</span>
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">现实主义</span>
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">IMAX拍摄</span>
+</div>
+</div>
+</div>
+<!-- 时间线项目4 -->
+<div class="relative timeline-item pb-8 mb-8">
+<div class="timeline-dot"></div>
+<div class="text-xl font-medium mb-2">2010</div>
+<div class="bg-[#111111] border border-[#B1ACAC]/20 rounded-xl p-4 hover:border-[#C9A46A] transition">
+<h3 class="text-lg mb-1" style="font-family: SimSun, serif">《盗梦空间》</h3>
+<p class="text-[#B1ACAC] mb-3">多层梦境概念，全球票房8.3亿美元，获4项奥斯卡</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">奥斯卡最佳摄影</span>
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">最佳视觉效果</span>
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">最佳音效剪辑</span>
+</div>
+</div>
+</div>
+<!-- 时间线项目5 -->
+<div class="relative timeline-item pb-8">
+<div class="timeline-dot"></div>
+<div class="text-xl font-medium mb-2">2020</div>
+<div class="bg-[#111111] border border-[#B1ACAC]/20 rounded-xl p-4 hover:border-[#C9A46A] transition">
+<h3 class="text-lg mb-1" style="font-family: SimSun, serif">《信条》</h3>
+<p class="text-[#B1ACAC] mb-3">时间逆转概念，疫情期间全球票房3.6亿美元</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">时间逆行</span>
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">实拍特效</span>
+<span class="bg-[#C9A46A]/10 text-[#C9A46A] px-2 py-1 rounded text-xs">IMAX胶片</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 右侧：关系图谱和获奖记录 -->
+<div class="space-y-8">
+<!-- 关系图谱 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-6">
+<h2 class="text-2xl mb-6" style="font-family: SimSun, serif">核心合作网络</h2>
+<div id="relation-chart"></div>
+<div class="mt-4 text-[#B1ACAC] text-sm">
+            节点大小表示合作次数，线条粗细表示合作紧密度
+          </div>
+</div>
+<!-- 获奖记录 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-6">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl" style="font-family: SimSun, serif">主要奖项荣誉</h2>
+<span class="text-[#C9A46A]">36项大奖 · 89项提名</span>
+</div>
+<div class="space-y-4">
+<!-- 奖项1 -->
+<div class="bg-[#111111] border border-[#B1ACAC]/20 rounded-lg p-4 hover:border-[#C9A46A] transition">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-medium">奥斯卡金像奖</h3>
+<span class="bg-[#C9A46A] text-[#111111] px-2 py-1 rounded text-sm font-medium">2024 · 获奖</span>
+</div>
+<p class="text-[#B1ACAC] mb-2">最佳导演 · 《奥本海默》</p>
+<div class="flex items-center text-sm text-[#B1ACAC]">
+<iconify-icon class="mr-1" icon="mdi:calendar"></iconify-icon>
+<span>第96届奥斯卡颁奖典礼 · 2024年3月11日</span>
+</div>
+</div>
+<!-- 奖项2 -->
+<div class="bg-[#111111] border border-[#B1ACAC]/20 rounded-lg p-4 hover:border-[#C9A46A] transition">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-medium">英国电影学院奖</h3>
+<span class="bg-[#C9A46A] text-[#111111] px-2 py-1 rounded text-sm font-medium">2011 · 获奖</span>
+</div>
+<p class="text-[#B1ACAC] mb-2">最佳导演 · 《盗梦空间》</p>
+<div class="flex items-center text-sm text-[#B1ACAC]">
+<iconify-icon class="mr-1" icon="mdi:calendar"></iconify-icon>
+<span>第44届堪萨斯影评人协会奖 · 2011年1月2日</span>
+</div>
+</div>
+<!-- 奖项3 -->
+<div class="bg-[#111111] border border-[#B1ACAC]/20 rounded-lg p-4 hover:border-[#C9A46A] transition">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-medium">金球奖</h3>
+<span class="bg-[#C9A46A] text-[#111111] px-2 py-1 rounded text-sm font-medium">2018 · 提名</span>
+</div>
+<p class="text-[#B1ACAC] mb-2">最佳导演 · 《敦刻尔克》</p>
+<div class="flex items-center text-sm text-[#B1ACAC]">
+<iconify-icon class="mr-1" icon="mdi:calendar"></iconify-icon>
+<span>第75届金球奖 · 2018年1月7日</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-[#111111] hover:bg-[#1A1A1A] border border-[#B1ACAC]/20 mt-4 py-3 rounded-lg transition flex items-center justify-center">
+<iconify-icon class="mr-2" icon="mdi:trophy"></iconify-icon>
+            查看全部89项提名记录
+          </button>
+</div>
+</div>
+</div>
+<!-- 创作理念 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-8 mt-8">
+<h2 class="text-2xl mb-6" style="font-family: SimSun, serif">导演创作信条</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div class="flex">
+<div class="flex-shrink-0 mr-4 mt-1">
+<div class="bg-[#C9A46A] w-10 h-10 rounded-full flex items-center justify-center">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:camera"></iconify-icon>
+</div>
+</div>
+<div>
+<h3 class="text-lg mb-2" style="font-family: SimSun, serif">实拍至上原则</h3>
+<p class="text-[#B1ACAC]">"我始终相信真实的物理效果能给观众带来无可替代的震撼体验。在《信条》中逆向行驶的汽车，在《星际穿越》中旋转的太空舱，都是实际搭建完成而非CG特效。"</p>
+</div>
+</div>
+<div class="flex">
+<div class="flex-shrink-0 mr-4 mt-1">
+<div class="bg-[#C9A46A] w-10 h-10 rounded-full flex items-center justify-center">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:clock"></iconify-icon>
+</div>
+</div>
+<div>
+<h3 class="text-lg mb-2" style="font-family: SimSun, serif">时间叙事实验</h3>
+<p class="text-[#B1ACAC]">"时间从来不是线性的容器，而是可以被折叠、扭曲的创作材料。《记忆碎片》的倒叙、《盗梦空间》的多层时间、《信条》的逆向时间流，都是对这种可能性的探索。"</p>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex">
+<div class="flex-shrink-0 mr-4 mt-1">
+<div class="bg-[#C9A46A] w-10 h-10 rounded-full flex items-center justify-center">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:film"></iconify-icon>
+</div>
+</div>
+<div>
+<h3 class="text-lg mb-2" style="font-family: SimSun, serif">IMAX革命</h3>
+<p class="text-[#B1ACAC]">"IMAX不只是更大的画幅，而是全新的沉浸式叙事语言。从《黑暗骑士》首次使用IMAX胶片拍摄真人场景，到《奥本海默》全片IMAX拍摄，我们不断突破这种媒介的边界。"</p>
+</div>
+</div>
+<div class="flex">
+<div class="flex-shrink-0 mr-4 mt-1">
+<div class="bg-[#C9A46A] w-10 h-10 rounded-full flex items-center justify-center">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:brain"></iconify-icon>
+</div>
+</div>
+<div>
+<h3 class="text-lg mb-2" style="font-family: SimSun, serif">观众信任</h3>
+<p class="text-[#B1ACAC]">"我从不低估观众的智慧。复杂的叙事结构不是障碍而是邀请，邀请观众参与解谜过程。当观众走出影院后仍在讨论电影细节，这就是成功的标志。"</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 页脚 -->
+<footer class="bg-[#151515] py-12 border-t border-[#B1ACAC]/20 mt-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- 网站信息 -->
+<div>
+<div class="flex items-center mb-6">
+<div class="bg-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-full mr-3">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:movie-filter"></iconify-icon>
+</div>
+<span class="text-xl font-semibold" style="font-family: SimSun, serif">导演档案馆</span>
+</div>
+<p class="text-[#B1ACAC] mb-6">全球导演资料一键库，为影视从业者提供权威可溯源资料</p>
+<div class="flex space-x-4">
+<a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:wechat"></iconify-icon>
+</a>
+<a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:douban"></iconify-icon>
+</a>
+</div>
+</div>
+<!-- 栏目导航 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">主要栏目</h3>
+<ul class="space-y-2">
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="director.html">导演索引</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="biography.html">生平档案</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="work_decoded.html">作品解码</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">创作哲学</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="teaching_resources.html">教学资源</a></li>
+</ul>
+</div>
+<!-- 资源分类 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">资源类型</h3>
+<ul class="space-y-2">
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">导演年表</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">分镜手稿</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">视觉解析</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">导演访谈</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">影视教案</a></li>
+</ul>
+</div>
+<!-- 联系方式 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">联系我们</h3>
+<ul class="space-y-3">
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:email"></iconify-icon>
+<span class="text-[#B1ACAC]">contact@directorarchive.com</span>
+</li>
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:wechat"></iconify-icon>
+<span class="text-[#B1ACAC]">Directors_Archive</span>
+</li>
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:map-marker"></iconify-icon>
+<span class="text-[#B1ACAC]">重庆市巴南区燕尾山路898号</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#B1ACAC]/20 mt-12 pt-6 text-center text-sm text-[#B1ACAC]">
+<p>© 2025 导演档案馆. 所有资料均标注来源，学术引用请注明出处</p>
+<p>诺兰导演档案最后更新: 2025年12月10日</p>
+</div>
+</div>
+</footer>
+<!-- ECharts关系图初始化 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const chartDom = document.getElementById('relation-chart');
+      const myChart = echarts.init(chartDom);
+      
+      const option = {
+        tooltip: {
+          formatter: function(params) {
+            if (params.dataType === 'node') {
+              return params.name;
+            } else {
+              return `${params.data.source} ↔ ${params.data.target}<br>合作次数: ${params.value}次`;
+            }
+          }
+        },
+        legend: {
+          data: ['导演', '演员', '摄影师', '配乐家', '编剧']
+        },
+        series: [{
+          type: 'graph',
+          layout: 'force',
+          force: {
+            repulsion: 200,
+            edgeLength: 100
+          },
+          roam: true,
+          draggable: true,
+          focusNodeAdjacency: true,
+          symbolSize: function(value) {
+            return Math.min(25 + value * 3, 70);
+          },
+          edgeSymbol: ['circle', 'arrow'],
+          edgeSymbolSize: [4, 8],
+          edgeLabel: {
+            show: true,
+            formatter: '{c}',
+            fontSize: 12
+          },
+          label: {
+            show: true,
+            position: 'inside',
+            formatter: '{b}',
+            fontSize: 12
+          },
+          lineStyle: {
+            width: 2,
+            color: 'source',
+            curveness: 0.2
+          },
+          data: [
+            {name: '诺兰', value: 20, category: 0, symbolSize: 70},
+            {name: '基里安·墨菲', value: 8, category: 1, symbolSize: 50},
+            {name: '汉斯·季默', value: 7, category: 3, symbolSize: 45},
+            {name: '沃利·菲斯特', value: 6, category: 2, symbolSize: 40},
+            {name: '乔纳森·诺兰', value: 5, category: 4, symbolSize: 40},
+            {name: '克里斯蒂安·贝尔', value: 3, category: 1, symbolSize: 35},
+            {name: '安妮·海瑟薇', value: 2, category: 1, symbolSize: 30},
+            {name: '汤姆·哈迪', value: 2, category: 1, symbolSize: 30},
+            {name: '迈克尔·凯恩', value: 8, category: 1, symbolSize: 45}
+          ],
+          links: [
+            {source: '诺兰', target: '基里安·墨菲', value: 8},
+            {source: '诺兰', target: '汉斯·季默', value: 7},
+            {source: '诺兰', target: '沃利·菲斯特', value: 6},
+            {source: '诺兰', target: '乔纳森·诺兰', value: 5},
+            {source: '诺兰', target: '克里斯蒂安·贝尔', value: 3},
+            {source: '诺兰', target: '安妮·海瑟薇', value: 2},
+            {source: '诺兰', target: '汤姆·哈迪', value: 2},
+            {source: '诺兰', target: '迈克尔·凯恩', value: 8}
+          ],
+          categories: [
+            {name: '导演'},
+            {name: '演员'},
+            {name: '摄影师'},
+            {name: '配乐家'},
+            {name: '编剧'}
+          ]
+        }]
+      };
+      
+      myChart.setOption(option);
+      
+      // 响应窗口大小变化
+      window.addEventListener('resize', function() {
+        myChart.resize();
+      });
+    });
+  </script>
+</body>
+</html>

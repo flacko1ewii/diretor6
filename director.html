@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>导演索引 - 导演档案馆</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+<style>
+    .alphabet-nav {
+      scrollbar-width: none;
+    }
+    .alphabet-nav::-webkit-scrollbar {
+      display: none;
+    }
+    .director-card:hover .director-name {
+      color: #C9A46A;
+    }
+  </style>
+</head>
+<body class="bg-[#111111] text-white">
+<!-- 导航栏 -->
+<nav class="sticky top-0 z-50 bg-[#111111]/90 backdrop-blur-md border-b border-[#B1ACAC] px-6 py-4 flex flex-col md:flex-row justify-between">
+<!-- Logo和标题 -->
+<div class="flex items-center mb-4 md:mb-0">
+<div class="bg-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-full mr-3">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:movie-filter"></iconify-icon>
+</div>
+<div>
+<h1 class="text-xl" style="font-family: SimSun, serif">导演档案馆</h1>
+</div>
+</div>
+<!-- 搜索功能 -->
+<div class="flex-1 max-w-2xl mx-0 md:mx-8 mb-4 md:mb-0">
+<div class="relative">
+<input class="w-full bg-[#222222] border border-[#B1ACAC] rounded-lg pl-12 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C9A46A]" placeholder="搜索导演姓名、作品或关键词..." type="text"/>
+<iconify-icon class="absolute left-4 top-3.5 text-xl text-[#B1ACAC]" icon="mdi:magnify"></iconify-icon>
+</div>
+</div>
+<!-- 用户功能 -->
+<div class="flex items-center space-x-4 justify-end">
+<a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:bookmark"></iconify-icon>
+</a>
+<button class="bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] px-4 py-2 rounded-lg text-sm transition">个人中心</button>
+</div>
+</nav>
+<!-- 页面内容 -->
+<div class="container mx-auto px-4 py-8">
+<!-- 页面标题和导航 -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+<h2 class="text-3xl mb-4 md:mb-0" style="font-family: SimSun, serif">导演索引</h2>
+<div class="flex space-x-2">
+<a class="px-4 py-2 bg-[#1A1A1A] rounded-lg hover:bg-[#222222] transition" href="#">A-Z索引</a>
+<a class="px-4 py-2 bg-[#1A1A1A] rounded-lg hover:bg-[#222222] transition" href="#">热门导演</a>
+<a class="px-4 py-2 bg-[#1A1A1A] rounded-lg hover:bg-[#222222] transition" href="#">高级筛选</a>
+</div>
+</div>
+<!-- A-Z导航和筛选区 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-6 mb-8">
+<div class="flex flex-col md:flex-row justify-between">
+<!-- A-Z字母导航 -->
+<div class="w-full md:w-auto mb-6 md:mb-0">
+<h3 class="text-lg mb-3" style="font-family: SimSun, serif">姓氏索引</h3>
+<div class="alphabet-nav flex overflow-x-auto space-x-1 pb-2">
+<a class="bg-[#111111] border border-[#C9A46A] text-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#A">A</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#B">B</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#C">C</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#D">D</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#E">E</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#F">F</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#G">G</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#H">H</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#I">I</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#J">J</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#K">K</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#L">L</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#M">M</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#N">N</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#O">O</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#P">P</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#Q">Q</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#R">R</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#S">S</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#T">T</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#U">U</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#V">V</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#W">W</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#X">X</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#Y">Y</a>
+<a class="bg-[#111111] border border-[#B1ACAC]/20 hover:border-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-lg flex-shrink-0" href="#Z">Z</a>
+</div>
+</div>
+<!-- 筛选表单 -->
+<div class="w-full md:w-64">
+<h3 class="text-lg mb-3" style="font-family: SimSun, serif">高级筛选</h3>
+<div class="space-y-4">
+<div>
+<label class="block text-[#B1ACAC] text-sm mb-1">导演地区</label>
+<select class="w-full bg-[#111111] border border-[#B1ACAC]/20 rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A46A]">
+<option>全部地区</option>
+<option>华语地区</option>
+<option>北美地区</option>
+<option>欧洲地区</option>
+<option>日韩地区</option>
+<option>其他地区</option>
+</select>
+</div>
+<div>
+<label class="block text-[#B1ACAC] text-sm mb-1">活跃年代</label>
+<select class="w-full bg-[#111111] border border-[#B1ACAC]/20 rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A46A]">
+<option>全部年代</option>
+<option>(1960前)</option>
+<option>(1960-1980)</option>
+<option>(1980-2000)</option>
+<option>(2000至今)</option>
+</select>
+</div>
+<div>
+<label class="block text-[#B1ACAC] text-sm mb-1">代表流派</label>
+<select class="w-full bg-[#111111] border border-[#B1ACAC]/20 rounded-lg px-3 py-2 focus:outline-none focus:border-[#C9A46A]">
+<option>全部流派</option>
+<option>剧情片</option>
+<option>科幻片</option>
+<option>动作片</option>
+<option>文艺片</option>
+<option>喜剧片</option>
+<option>动画片</option>
+</select>
+</div>
+<button class="w-full bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] py-2 rounded-lg mt-2">应用筛选</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 影人热榜区 -->
+<div class="bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl p-6 mb-8">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl" style="font-family: SimSun, serif">影人热榜 TOP50</h3>
+<span class="text-sm text-[#B1ACAC]">更新于: 2025-12-11 15:30</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<!-- 热门导演1 -->
+<a class="group" href="#">
+<div class="relative bg-[#111111] rounded-xl overflow-hidden border border-[#B1ACAC]/20 group-hover:border-[#C9A46A] transition">
+<div class="absolute top-2 left-2 bg-[#C9A46A] text-[#111111] px-2 py-1 rounded-lg text-sm font-medium">#1</div>
+<div class="flex items-center px-1 py-1">
+<iconify-icon class="text-green-500 ml-auto mr-1" icon="mdi:trending-up"></iconify-icon>
+<span class="text-xs text-green-500">+12%</span>
+</div>
+<img alt="Christopher Nolan portrait" class="w-full h-40 object-cover" src="https://p3.itc.cn/images01/20231208/fcf4227237b247d4ab888a3cc2849e3d.jpeg"/>
+<div class="p-3">
+<h4 class="font-medium group-hover:text-[#C9A46A] transition">克里斯托弗·诺兰</h4>
+<p class="text-[#B1ACAC] text-sm truncate">《信条》《星际穿越》《盗梦空间》</p>
+</div>
+</div>
+</a>
+<!-- 热门导演2 -->
+<a class="group" href="#">
+<div class="relative bg-[#111111] rounded-xl overflow-hidden border border-[#B1ACAC]/20 group-hover:border-[#C9A46A] transition">
+<div class="absolute top-2 left-2 bg-[#C9A46A] text-[#111111] px-2 py-1 rounded-lg text-sm font-medium">#2</div>
+<div class="flex items-center px-1 py-1">
+<iconify-icon class="text-yellow-500 ml-auto mr-1" icon="mdi:trending-neutral"></iconify-icon>
+<span class="text-xs text-yellow-500">持平</span>
+</div>
+<img alt="Hayao Miyazaki portrait" class="w-full h-40 object-cover" src="https://photocdn.sohu.com/20140829/Img403877549.jpg"/>
+<div class="p-3">
+<h4 class="font-medium group-hover:text-[#C9A46A] transition">宫崎骏</h4>
+<p class="text-[#B1ACAC] text-sm truncate">《千与千寻》《哈尔的移动城堡》《幽灵公主》</p>
+</div>
+</div>
+</a>
+<!-- 热门导演3 -->
+<a class="group" href="#">
+<div class="relative bg-[#111111] rounded-xl overflow-hidden border border-[#B1ACAC]/20 group-hover:border-[#C9A46A] transition">
+<div class="absolute top-2 left-2 bg-[#C9A46A] text-[#111111] px-2 py-1 rounded-lg text-sm font-medium">#3</div>
+<div class="flex items-center px-1 py-1">
+<iconify-icon class="text-green-500 ml-auto mr-1" icon="mdi:trending-up"></iconify-icon>
+<span class="text-xs text-green-500">+5%</span>
+</div>
+<img alt="Bong Joon-ho portrait" class="w-full h-40 object-cover" src="https://img2.baidu.com/it/u=2022569529,2135543115&fm=253&fmt=auto&app=138&f=JPEG?w=333&h=500"/>
+<div class="p-3">
+<h4 class="font-medium group-hover:text-[#C9A46A] transition">奉俊昊</h4>
+<p class="text-[#B1ACAC] text-sm truncate">《寄生虫》《雪国列车》《母亲》</p>
+</div>
+</div>
+</a>
+<!-- 热门导演4 -->
+<a class="group" href="#">
+<div class="relative bg-[#111111] rounded-xl overflow-hidden border border-[#B1ACAC]/20 group-hover:border-[#C9A46A] transition">
+<div class="absolute top-2 left-2 bg-[#C9A46A] text-[#111111] px-2 py-1 rounded-lg text-sm font-medium">#4</div>
+<div class="flex items-center px-1 py-1">
+<iconify-icon class="text-green-500 ml-auto mr-1" icon="mdi:trending-up"></iconify-icon>
+<span class="text-xs text-green-500">+3%</span>
+</div>
+<img alt="Bong Joon-ho portrait" class="w-full h-40 object-cover" src="https://img1.baidu.com/it/u=2771274221,3568361337&fm=253&fmt=auto&app=138&f=JPEG?w=581&h=387"/>
+<div class="p-3">
+<h4 class="font-medium group-hover:text-[#C9A46A] transition">阿尔伯特·塞拉</h4>
+<p class="text-[#B1ACAC] text-sm truncate">《孤寂午后》《岛屿上的煎熬》《堂吉诃德》</p>
+</div>
+</div>
+</a>
+<!-- 查看更多 -->
+<a class="flex items-center justify-center bg-[#1A1A1A] border-2 border-dashed border-[#B1ACAC]/20 rounded-xl group hover:border-[#C9A46A] transition" href="#">
+<div class="text-center p-4">
+<iconify-icon class="text-3xl text-[#B1ACAC] group-hover:text-[#C9A46A] transition mb-2" icon="mdi:chevron-double-right"></iconify-icon>
+<p class="font-medium">查看全部TOP50</p>
+<p class="text-sm text-[#B1ACAC]">实时更新热门导演</p>
+</div>
+</a>
+</div>
+</div>
+<!-- 导演列表 -->
+<div class="mb-8">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl" id="A" style="font-family: SimSun, serif">A 姓氏导演</h3>
+<span class="text-[#B1ACAC]">共 24 位导演</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- 导演卡片1 -->
+<a class="director-card bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl overflow-hidden hover:shadow-lg transition flex" href="#">
+<div class="w-24 h-24 flex-shrink-0">
+<img alt="Wes Anderson portrait" class="w-full h-full object-cover" src="https://sns-img-hw.xhscdn.com/70f871c2-621b-3909-8dc3-057e6d33c299?imageView2/2/w/1080/format/webp"/>
+</div>
+<div class="p-4 flex-1">
+<h4 class="director-name font-medium mb-1">韦斯·安德森</h4>
+<div class="flex items-center mb-2">
+<span class="text-[#C9A46A] text-sm mr-2">美国</span>
+<div class="flex items-center">
+<iconify-icon class="text-yellow-400 mr-1 text-sm" icon="mdi:star"></iconify-icon>
+<span class="text-sm">热度 8.9</span>
+</div>
+</div>
+<p class="text-[#B1ACAC] text-sm line-clamp-2">代表作品：《布达佩斯大饭店》《月升王国》《犬之岛》</p>
+</div>
+</a>
+<!-- 导演卡片2 -->
+<a class="director-card bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl overflow-hidden hover:shadow-lg transition flex" href="#">
+<div class="w-24 h-24 flex-shrink-0">
+<img alt="Paul Thomas Anderson portrait" class="w-full h-full object-cover" src="https://b0.bdstatic.com/ugc/3652aSdhdSxlpRzdl-RUUQcb86416162fb8578adaa3a1604ec9a7b.jpg"/>
+</div>
+<div class="p-4 flex-1">
+<h4 class="director-name font-medium mb-1">保罗·托马斯·安德森</h4>
+<div class="flex items-center mb-2">
+<span class="text-[#C9A46A] text-sm mr-2">美国</span>
+<div class="flex items-center">
+<iconify-icon class="text-yellow-400 mr-1 text-sm" icon="mdi:star"></iconify-icon>
+<span class="text-sm">热度 8.7</span>
+</div>
+</div>
+<p class="text-[#B1ACAC] text-sm line-clamp-2">代表作品：《血色将至》《魅影缝匠》《甘草披萨》</p>
+</div>
+</a>
+<!-- 导演卡片3 -->
+<a class="director-card bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-xl overflow-hidden hover:shadow-lg transition flex" href="#">
+<div class="w-24 h-24 flex-shrink-0">
+<img alt="Robert Altman portrait" class="w-full h-full object-cover" src="https://q7.itc.cn/q_70/images03/20250426/d671912935694dd6881eeead78b73221.png"/>
+</div>
+<div class="p-4 flex-1">
+<h4 class="director-name font-medium mb-1">罗伯特·奥特曼</h4>
+<div class="flex items-center mb-2">
+<span class="text-[#C9A46A] text-sm mr-2">美国</span>
+<div class="flex items-center">
+<iconify-icon class="text-yellow-400 mr-1 text-sm" icon="mdi:star"></iconify-icon>
+<span class="text-sm">热度 8.5</span>
+</div>
+</div>
+<p class="text-[#B1ACAC] text-sm line-clamp-2">代表作品：《高斯福庄园》《纳什维尔》《陆军野战医院》</p>
+</div>
+</a>
+</div>
+</div>
+<!-- 分页 -->
+<div class="flex justify-center mb-12">
+<div class="flex space-x-2">
+<button class="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-lg hover:bg-[#222222] transition">
+<iconify-icon icon="mdi:chevron-left"></iconify-icon>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-[#C9A46A] text-[#111111] rounded-lg font-medium">1</button>
+<button class="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-lg hover:bg-[#222222] transition">2</button>
+<button class="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-lg hover:bg-[#222222] transition">3</button>
+<span class="w-10 h-10 flex items-center justify-center text-[#B1ACAC]">...</span>
+<button class="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-lg hover:bg-[#222222] transition">8</button>
+<button class="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] border border-[#B1ACAC]/20 rounded-lg hover:bg-[#222222] transition">
+<iconify-icon icon="mdi:chevron-right"></iconify-icon>
+</button>
+</div>
+</div>
+</div>
+<!-- 页脚 -->
+<footer class="bg-[#151515] py-12 border-t border-[#B1ACAC]/20">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- 网站信息 -->
+<div>
+<div class="flex items-center mb-6">
+<div class="bg-[#C9A46A] w-10 h-10 flex items-center justify-center rounded-full mr-3">
+<iconify-icon class="text-[#111111] text-xl" icon="mdi:movie-filter"></iconify-icon>
+</div>
+<span class="text-xl font-semibold" style="font-family: SimSun, serif">导演档案馆</span>
+</div>
+<p class="text-[#B1ACAC] mb-6">全球导演资料一键库，为影视从业者提供权威可溯源资料</p>
+<div class="flex space-x-4">
+<a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:wechat"></iconify-icon>
+</a>
+<a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">
+<iconify-icon class="text-xl" icon="mdi:douban"></iconify-icon>
+</a>
+</div>
+</div>
+<!-- 栏目导航 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">主要栏目</h3>
+<ul class="space-y-2">
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="director.html">导演索引</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="biography.html">生平档案</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="work_decoded.html">作品解码</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">创作哲学</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="teaching_resources.html">教学资源</a></li>
+</ul>
+</div>
+<!-- 资源分类 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">资源类型</h3>
+<ul class="space-y-2">
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">导演年表</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">分镜手稿</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">视觉解析</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">导演访谈</a></li>
+<li><a class="text-[#B1ACAC] hover:text-[#C9A46A] transition" href="#">影视教案</a></li>
+</ul>
+</div>
+<!-- 联系方式 -->
+<div>
+<h3 class="text-lg mb-4" style="font-family: SimSun, serif">联系我们</h3>
+<ul class="space-y-3">
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:email"></iconify-icon>
+<span class="text-[#B1ACAC]">contact@directorarchive.com</span>
+</li>
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:wechat"></iconify-icon>
+<span class="text-[#B1ACAC]">Directors_Archive</span>
+</li>
+<li class="flex items-center">
+<iconify-icon class="text-[#B1ACAC] mr-2" icon="mdi:map-marker"></iconify-icon>
+<span class="text-[#B1ACAC]">重庆市巴南区燕尾山路898号</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#B1ACAC]/20 mt-12 pt-6 text-center text-sm text-[#B1ACAC]">
+<p>© 2025 导演档案馆. 所有资料均标注来源，学术引用请注明出处</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
