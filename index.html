@@ -51,7 +51,46 @@
 <input class="bg-[#222222] border border-[#B1ACAC] rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C9A46A] w-40 md:w-64" placeholder="搜索导演..." type="text"/>
 <iconify-icon class="absolute left-3 top-2.5 text-lg text-[#B1ACAC]" icon="mdi:magnify"></iconify-icon>
 </div>
-<button class="bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] px-4 py-2 rounded-lg transition">登录/注册</button>
+<!-- 注册 / 登录 切换区 -->
+<div class="relative">
+  <!-- 触发按钮 -->
+  <button id="regBtn"
+          class="bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] px-4 py-2 rounded-lg transition">
+    登录/注册
+  </button>
+
+  <!-- 下拉注册表单 -->
+  <form id="regForm"
+        class="hidden absolute right-0 mt-2 w-80 bg-[#1A1A1A] border border-[#B1ACAC]/30 rounded-xl p-4 shadow-2xl z-50">
+    <h3 class="text-lg mb-3 text-center text-white" style="font-family:SimSun,serif">快速注册</h3>
+
+    <input name="username" type="text" required placeholder="用户名"
+           class="w-full bg-[#111111] text-white placeholder-[#B1ACAC] border border-[#B1ACAC]/20 rounded px-3 py-2 mb-3 focus:outline-none focus:border-[#C9A46A]">
+    <input name="email" type="email" required placeholder="邮箱"
+           class="w-full bg-[#111111] text-white placeholder-[#B1ACAC] border border-[#B1ACAC]/20 rounded px-3 py-2 mb-3 focus:outline-none focus:border-[#C9A46A]">
+    <input name="password" type="password" required placeholder="密码（≥6位）"
+           class="w-full bg-[#111111] text-white placeholder-[#B1ACAC] border border-[#B1ACAC]/20 rounded px-3 py-2 mb-4 focus:outline-none focus:border-[#C9A46A]">
+
+    <button type="submit"
+            class="w-full bg-[#C9A46A] hover:bg-[#B09A5B] text-[#111111] py-2 rounded-lg transition">
+      创建账号
+    </button>
+    <p class="text-xs text-[#B1ACAC] mt-2 text-center">已有账号？<a href="#" class="text-[#C9A46A] hover:underline">立即登录</a></p>
+  </form>
+</div>
+
+<!-- 展开/收起逻辑 -->
+<script>
+  const btn  = document.getElementById('regBtn');
+  const form = document.getElementById('regForm');
+  btn.addEventListener('click', () => form.classList.toggle('hidden'));
+  // 点击外部自动收起
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#regBtn') && !e.target.closest('#regForm')) {
+      form.classList.add('hidden');
+    }
+  });
+</script>
 </div>
 </nav>
 <!-- Banner区域 -->
